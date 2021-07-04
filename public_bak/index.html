@@ -1,0 +1,34 @@
+<html lang="en">
+  <head>
+    <script>
+       function Logout(){
+          const xhr = new XMLHttpRequest();
+          xhr.open('POST', '/user/logout');
+          xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+          xhr.onload = function() {
+              console.log('Signed out as: ' + xhr.responseText);
+              let result = JSON.parse(xhr.responseText); 
+              if(result.code === 0){
+                  var x = document.cookie;
+                  console.log("document cookies === " + x); 
+                  window.location.href = "login.html"; 
+              } 
+          };
+          xhr.send("");
+      }
+      window.onload = ()=>{
+        let span = document.getElementById('userName'); 
+        let userName = localStorage.getItem("userName"); 
+        span.innerText = userName; 
+      }
+     
+      </script>
+  </head>
+  <body>
+    user is logined
+      <div id='logoutSection' class="fixed-top-right" >
+        <span id='userName' ></span>
+        <a href="#"  onclick="Logout();">Sign out</a>
+      </div>
+  </body>
+</html>

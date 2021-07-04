@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Janus VideoRoom</title>
+    <link rel="stylesheet" href="lobby.css">
+</head>
+
+<body>
+    <script type="text/javascript" src="lobby.js"></script>
+    <div id='logoutSection' style="position: absolute;top:10px;left:70%;" >
+        <span id='userName' ></span>
+        <a href="#" id="logoutTag">Sign out</a>
+    </div>
+    <div id="joinForm">
+        <label for="displayNameInput">Your name:</label>
+        <input type="text" id="displayNameInput">
+        <br>
+        <br>
+
+        <label for="roomIdInput">Input ID to join a room:</label>
+        <input type="text" id="roomIdInput">
+        <br>
+
+        <div id="roomsListBlock">
+            <label for="roomsList">or choose a room from the public list:</label>
+            <select name="rooms" id="roomsList">
+            </select>
+        </div>
+        <br>
+
+        <label for="roomPinInput">PIN if necessary:</label>
+        <input type="text" id="roomPinInput">
+        <br>
+        <label for="roomSecretInput">Host secret if necessary:</label>
+        <input type="text" id="roomSecretInput">
+        <br>
+        <br>
+
+        <label for="joinAudio">audio</label>
+        <input type="checkbox" id="joinAudio" value="false">
+
+        <label for="joinVideo">video</label>
+        <input type="checkbox" id="joinVideo" value="true">
+
+        <label for="joinScreen">screen</label>
+        <input type="checkbox" id="joinScreen" value="true">
+        <br>
+
+        <button id="join">Join</button>
+    </div>
+    <div id="in-call" hidden>
+        <table><tr><td>
+            <!-- remote participants grid -->
+            <div id="inboundDisplaysContainer">
+                <button id="gridWider">Grid wider</button>
+                <button id="gridNarrower">Grid narrower</button>
+                <button id="createSubRoom" hidden>New break-out room</button>
+                <button id="removeFocus" hidden>Remove focus</button>
+                <div id="inboundDisplaysGrid" class="grid-container">
+                </div>
+                <div id="subroomMonitors">
+                </div>
+            </div>
+        </td></tr></table>
+
+        <!-- local participant's display -->
+        <div class="modal local-display">
+            <div align="center" class="modal-content local-display-inner">
+                <div id="outboundDisplay">
+                </div>
+                <button id="switchAudio"></button>
+                <button id="switchVideo"></button>
+                <button id="switchResolution"></button>
+                <button id="switchFps"></button>
+                <button id="shareScreen"></button>
+            </div>
+        </div>
+
+        <div class="modal chat-container">
+            <div id="chatContainer" align="center" class="modal-content chat-container-inner">
+                <ul id="messagesHistory" align="left" class="chat-history"></ul>
+                <input id="textMessageInput" type="text" align="left">
+                <button id="sendTextMessage">Send</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

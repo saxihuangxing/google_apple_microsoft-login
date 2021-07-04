@@ -1,0 +1,10 @@
+Port: 443
+CLIENT_ID:
+    google: 311051639457-77hesftvs3o4u4r8fmf6vhr5laas0j88.apps.googleusercontent.com
+    microsoft: ba420e10-a4c4-41f7-a885-adbb976da867
+    apple: com.huangxing8.edu
+log:
+    filename: /var/log/userManage.log
+    level: verbose 
+dbUrl: mongodb://127.0.0.1:8889/
+dbName: edu

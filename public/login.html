@@ -1,0 +1,34 @@
+<html lang="en">
+  <head>
+    <meta name="google-signin-scope" content="profile email">
+    <script src="https://apis.google.com/js/api:client.js"></script>
+    <script src="https://alcdn.msauth.net/browser/2.1.0/js/msal-browser.js" integrity="sha384-M9bRB06LdiYadS+F9rPQnntFCYR3UJvtb2Vr4Tmhw9WBwWUfxH8VDRAFKNn3VTc/" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="login.css"> 
+    <script type="text/javascript" src="login.js"></script>
+  </head>
+  <body>
+    <div id="loginForm">
+      <h2>Remote Education Platform</h2>
+      <div class="container">
+          <form action="">
+              <div class="row">
+                  <h2 style="text-align:center">Login with Social Media</h2>
+                  <div class="col">
+                      <a href="#" class="google btn" id="googlemBtn"><i class="fa fa-google fa-fw">
+                      </i> Login with Google+
+                      </a>
+                      <a href="#" class="fb btn" onClick="microsoftSignin()">
+                          <i class="fa fa-windows fa-fw"></i> Login with Microsoft
+                      </a>
+                      <a href="#" class="twitter btn" onclick="appleSignIn()">
+                          <i class="fa fa-apple fa-fw" ></i> Login with Apple
+                      </a>
+                  </div>
+              </div>
+          </form>
+      </div>
+  </div>
+  </body>
+</html>

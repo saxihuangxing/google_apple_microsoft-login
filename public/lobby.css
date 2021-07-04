@@ -1,0 +1,53 @@
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    overflow: auto;
+}
+
+.modal-content {
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #888;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto; /* this field is initialized dynamically */
+    grid-gap: 10px;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid black;
+    text-align: center;
+    font-size: 30px;
+}
+
+.local-display {
+    right: 50px;
+    top: 50px;
+}
+
+.local-display-inner {
+    background-color: #1f6b5c;
+}
+
+.chat-container {
+    right: 50px;
+    bottom: 50px;
+}
+
+.chat-container-inner {
+    background-color: #647d47;
+}
+
+.chat-history {
+    border: 1px solid;
+    width: 300px;
+    height: 100px;
+    overflow: auto;
+    list-style-type:none
+}

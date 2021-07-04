@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Janus VideoRoom</title>
+</head>
+
+<body>
+    <script type="text/javascript" src="admin.js"></script>
+
+    <div style="border:1px solid black">
+        <label for="createRoomDescription">Description:</label>
+        <input type="text" id="createRoomDescription">
+        <br>
+
+        <label for="createRoomPin">PIN for joining:</label>
+        <input type="text" id="createRoomPin">
+        <br>
+
+        <label for="createRoomSecret">Admin's password</label>
+        <input type="text" id="createRoomSecret">
+        <br>
+
+        <label for="createRoomHidden">Hidden room?</label>
+        <input type="checkbox" id="createRoomHidden" value="false">
+        <br>
+
+        <label for="createRoomHidePin">Hide PIN from URL?</label>
+        <input type="checkbox" id="createRoomHidePin" value="false">
+        <br>
+
+        <label for="createRoomRecording">Enable recording?</label>
+        <input type="checkbox" id="createRoomRecording" value="false">
+        <br>
+
+        <button id="create">Create new room</button>
+        <div id="createdMessage" hidden>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div style="border:1px solid black">
+        <label for="deleteRoomId">Room ID:</label>
+        <input type="text" id="deleteRoomId">
+        <br>
+
+        <label for="deleteRoomSecret">Admin's password</label>
+        <input type="text" id="deleteRoomSecret">
+        <br>
+
+        <button id="delete">Delete the room</button>
+        <div id="deletedMessage" hidden>
+        </div>
+    </div>
+</body>
+</html>
